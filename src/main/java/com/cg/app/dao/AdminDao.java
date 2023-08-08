@@ -12,7 +12,7 @@ public interface AdminDao {
 	public Admin validateAdminLogin(String  username, String userPass) throws UserException;
 	public Admin save(Admin admin);
 	public Admin find(Integer adminId);
-	public List<Admin> findAll;
+	public List<Admin> findAll();
 	public boolean addMovieToTheatre(Integer movieId, Integer showId, Integer theatreId);
 	public Admin remove(Integer adminId);
 	public List<Movie> getMovies();

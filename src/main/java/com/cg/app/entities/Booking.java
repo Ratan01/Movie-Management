@@ -24,7 +24,7 @@ public class Booking {
 	@Column(name="payment")
 	private String payment;
 	@Column(name="delete_flag")
-	private Integer falg=0;
+	private Integer flag=0;
 	@ManyToOne
 	@JoinColumn(name="show_id")
 	private Show show;
@@ -35,14 +35,14 @@ public class Booking {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Booking(BigInteger bookingId, Integer seatsBooked, Integer totalCost, String payment, Integer falg,
+	public Booking(BigInteger bookingId, Integer seatsBooked, Integer totalCost, String payment, Integer flag,
 			Show show, Customer customer) {
 		super();
 		this.bookingId = bookingId;
 		this.seatsBooked = seatsBooked;
 		this.totalCost = totalCost;
 		this.payment = payment;
-		this.falg = falg;
+		this.flag = flag;
 		this.show = show;
 		this.customer = customer;
 	}
@@ -70,11 +70,11 @@ public class Booking {
 	public void setPayment(String payment) {
 		this.payment = payment;
 	}
-	public Integer getFalg() {
-		return falg;
+	public Integer getFlag() {
+		return flag;
 	}
-	public void setFalg(Integer falg) {
-		this.falg = falg;
+	public void setFlag(Integer flag) {
+		this.flag = flag;
 	}
 	public Show getShow() {
 		return show;
@@ -91,7 +91,7 @@ public class Booking {
 	@Override
 	public String toString() {
 		return "Booking [bookingId=" + bookingId + ", seatsBooked=" + seatsBooked + ", totalCost=" + totalCost
-				+ ", payment=" + payment + ", falg=" + falg + ", show=" + show + ", customer=" + customer + "]";
+				+ ", payment=" + payment + ", flag=" + flag + ", show=" + show + ", customer=" + customer + "]";
 	}
 	
 }
